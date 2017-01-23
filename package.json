@@ -1,6 +1,6 @@
 {
   "name": "is-array-sorted",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if an Array is sorted",
   "license": "MIT",
   "repository": "sindresorhus/is-array-sorted",
