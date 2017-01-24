@@ -1,7 +1,8 @@
 'use strict';
 
 const defaultComparator = (a, b) => a > b;
-module.exports = (arr, comp = defaultComparator) => {
+module.exports = (arr, comp) => {
+	comp = comp || defaultComparator;
 	var a = arr[0];
 	for (var i = 1, len = arr.length; i < len; i++) {
 		var b = arr[i];
