@@ -1,6 +1,6 @@
 'use strict';
 
-const defaultComparator = (a, b) => a - b;
+const defaultComparator = (a, b) => a > b ? 1 : 0;
 module.exports = (arr, comp) => {
 	// pass only iterable objects
 	if (!arr || typeof arr[Symbol.iterator] !== 'function') {
