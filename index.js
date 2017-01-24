@@ -1,12 +1,14 @@
 'use strict';
-module.exports = (arr, comp) => {
-	for (let i = 0; i < arr.length - 1; i++) {
-		const a = arr[i];
-		const b = arr[i + 1];
 
-		if (comp ? comp(a, b) > 0 : a > b) {
+const defaultComparator = (a, b) => a > b;
+module.exports = (arr, comp = defaultComparator) => {
+	var a = arr[0];
+	for (var i = 1, len = arr.length; i < len; i++) {
+		var b = arr[i];
+		if (comp(a, b)) {
 			return false;
 		}
+		a = b;
 	}
 
 	return true;
