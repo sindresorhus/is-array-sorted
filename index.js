@@ -2,7 +2,8 @@
 
 const defaultComparator = (a, b) => a > b;
 module.exports = (arr, comp) => {
-	if (!Array.isArray(arr)) {
+	// pass only iterable objects
+	if (!arr || typeof arr[Symbol.iterator] !== 'function') {
 		return false;
 	}
 	comp = comp || defaultComparator;
