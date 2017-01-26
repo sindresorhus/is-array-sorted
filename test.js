@@ -1,7 +1,7 @@
 import test from 'ava';
 import m from './';
 
-test('main', t => {
+test(t => {
 	t.true(m([1, 2, 3, 4]));
 	t.true(m([1, 1, 1, 4]));
 	t.true(m(['a', 'b', 'c']));
