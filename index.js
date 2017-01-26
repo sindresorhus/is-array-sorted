@@ -1,12 +1,19 @@
 'use strict';
-module.exports = (arr, comp) => {
-	for (let i = 0; i < arr.length - 1; i++) {
-		const a = arr[i];
-		const b = arr[i + 1];
 
-		if (comp ? comp(a, b) > 0 : a > b) {
+const defaultComparator = (a, b) => a > b ? 1 : 0;
+module.exports = (arr, comp) => {
+	// pass only iterable objects
+	if (!arr || typeof arr[Symbol.iterator] !== 'function') {
+		return false;
+	}
+	comp = comp || defaultComparator;
+	var a = arr[0];
+	for (var i = 1, len = arr.length; i < len; i++) {
+		var b = arr[i];
+		if (comp(a, b) > 0) {
 			return false;
 		}
+		a = b;
 	}
 
 	return true;
