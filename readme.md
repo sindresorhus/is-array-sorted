@@ -1,12 +1,12 @@
 # is-array-sorted [![Build Status](https://travis-ci.org/sindresorhus/is-array-sorted.svg?branch=master)](https://travis-ci.org/sindresorhus/is-array-sorted)
 
-> Check if an Array is sorted
+> Check if an array is sorted
 
 
 ## Install
 
 ```
-$ npm install --save is-array-sorted
+$ npm install is-array-sorted
 ```
 
 
@@ -28,17 +28,21 @@ isArraySorted(['a', 'b', 'c']);
 
 ## API
 
-### isArraySorted(input, [comparator])
+### isArraySorted(array, [options])
 
-Returns a boolean.
+Returns a `boolean`.
 
-#### input
+#### array
 
-Type: `Array`
+Type: `unknown[]`
 
 Array to check.
 
-#### comparator
+#### options
+
+Type: `object`
+
+##### comparator
 
 Type: `Function`<br>
 Default: Ascending order (`(a, b) => a - b`)
