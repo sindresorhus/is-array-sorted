@@ -1,10 +1,14 @@
 'use strict';
-module.exports = (arr, comp) => {
-	for (let i = 0; i < arr.length - 1; i++) {
-		const a = arr[i];
-		const b = arr[i + 1];
+module.exports = (array, options = {}) => {
+	const compare = options.comparator ?
+		(left, right) => options.comparator(left, right) > 0 :
+		(left, right) => left > right;
 
-		if (comp ? comp(a, b) > 0 : a > b) {
+	for (let i = 0; i < array.length - 1; i++) {
+		const left = array[i];
+		const right = array[i + 1];
+
+		if (compare(left, right)) {
 			return false;
 		}
 	}

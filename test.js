@@ -1,16 +1,16 @@
 import test from 'ava';
-import m from './';
+import isArraySorted from '.';
 
-test(t => {
-	t.true(m([1, 2, 3, 4]));
-	t.true(m([1, 1, 1, 4]));
-	t.true(m(['a', 'b', 'c']));
-	t.true(m(['cb', 'skip']));
+test('main', t => {
+	t.true(isArraySorted([1, 2, 3, 4]));
+	t.true(isArraySorted([1, 1, 1, 4]));
+	t.true(isArraySorted(['a', 'b', 'c']));
+	t.true(isArraySorted(['cb', 'skip']));
 
-	t.false(m([1, 1, 3, 2]));
-	t.false(m([1, 3, 4, 2]));
-	t.false(m(['skip', 'cb']));
+	t.false(isArraySorted([1, 1, 3, 2]));
+	t.false(isArraySorted([1, 3, 4, 2]));
+	t.false(isArraySorted(['skip', 'cb']));
 
-	t.true(m([4, 3, 2, 1], (a, b) => b - a));
-	t.false(m([1, 3, 4, 2], (a, b) => b - a));
+	t.true(isArraySorted([4, 3, 2, 1], {comparator: (a, b) => b - a}));
+	t.false(isArraySorted([1, 3, 4, 2], {comparator: (a, b) => b - a}));
 });
