@@ -28,7 +28,7 @@ isArraySorted(['a', 'b', 'c']);
 
 ## API
 
-### isArraySorted(array, [options])
+### isArraySorted(array, options?)
 
 Returns a `boolean`.
 
@@ -48,8 +48,3 @@ Type: `Function`<br>
 Default: Ascending order (`(a, b) => a - b`)
 
 Same as [`Array#sort(comparator)`](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#Description).
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

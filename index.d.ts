@@ -26,7 +26,7 @@ isArraySorted(['a', 'b', 'c']);
 //=> true
 ```
 */
-declare function isArraySorted<T = unknown>(
+declare function isArraySorted<T>(
 	array: ReadonlyArray<T>,
 	options?: isArraySorted.Options<T>
 ): boolean;
