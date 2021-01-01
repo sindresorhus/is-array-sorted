@@ -1,4 +1,4 @@
-# is-array-sorted [![Build Status](https://travis-ci.org/sindresorhus/is-array-sorted.svg?branch=master)](https://travis-ci.org/sindresorhus/is-array-sorted)
+# is-array-sorted
 
 > Check if an array is sorted
 
