@@ -1,5 +1,5 @@
 import test from 'ava';
-import isArraySorted from '.';
+import isArraySorted from './index.js';
 
 test('main', t => {
 	t.true(isArraySorted([1, 2, 3, 4]));
